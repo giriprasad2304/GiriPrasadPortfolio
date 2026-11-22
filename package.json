@@ -1,0 +1,15 @@
+{
+  "name": "giri-prasad-portfolio-root",
+  "version": "1.0.0",
+  "description": "Root package for Giri Prasad Portfolio MERN Stack",
+  "scripts": {
+    "postinstall": "npm install --prefix client",
+    "install-all": "npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "build": "npm run build --prefix client",
+    "start": "node server/src/server.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
